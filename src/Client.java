@@ -13,9 +13,11 @@ public class Client {
             num1 = Integer.parseInt(defaultBIS.readLine());
             num2 = Integer.parseInt(defaultBIS.readLine());
 
+            //socket = new Socket("u-pl3.ms.mff.cuni.cz", 5000);
             socket = new Socket("localhost", 5000);
 
             oo = new ObjectOutputStream(socket.getOutputStream());
+            //oo.writeLong(500L);
             oo.writeInt(num1);
             oo.writeInt(num2);
             oo.flush();

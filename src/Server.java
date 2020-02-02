@@ -1,4 +1,6 @@
+import javax.net.ServerSocketFactory;
 import java.io.*;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -14,6 +16,7 @@ public class Server {
         while (true){
             System.out.println("Waiting for connection.");
             socket = s.accept();
+            System.out.println("Connection established.");
 
             oi = new ObjectInputStream(socket.getInputStream());
             num1 = oi.readInt();
